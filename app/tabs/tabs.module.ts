@@ -1,9 +1,9 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptCommonModule } from "nativescript-angular/common";
 
-import { BrowseComponent } from "./browse/browse.component";
+import { PerformanceComponent } from "./performance/performance.component";
 import { HomeComponent } from "./home/home.component";
-import { SearchComponent } from "./search/search.component";
+import { NativeHardwareTestComponent } from "./native-hardware-test/native-hardware-test.component";
 import { TabsRoutingModule } from "./tabs-routing.module";
 import { TabsComponent } from "./tabs.component";
 
@@ -15,8 +15,8 @@ import { TabsComponent } from "./tabs.component";
     declarations: [
         TabsComponent,
         HomeComponent,
-        BrowseComponent,
-        SearchComponent
+        PerformanceComponent,
+        NativeHardwareTestComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA
