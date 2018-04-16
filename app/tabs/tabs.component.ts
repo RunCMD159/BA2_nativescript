@@ -1,12 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import { isAndroid } from "platform";
-import { SelectedIndexChangedEventData, TabView, TabViewItem } from "tns-core-modules/ui/tab-view";
+import {Component, OnInit} from "@angular/core";
+import {isAndroid} from "platform";
+import {SelectedIndexChangedEventData, TabView, TabViewItem} from "tns-core-modules/ui/tab-view";
 
 @Component({
     selector: "TabsComponent",
-    moduleId: module.id,
-    templateUrl: "./tabs.component.html",
-    styleUrls: ["./tabs.component.scss"]
+    templateUrl: "tabs/tabs.component.html",
+    styleUrls: ["tabs/tabs.component.scss"]
 })
 export class TabsComponent implements OnInit {
 

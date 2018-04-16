@@ -1,9 +1,9 @@
-import { Component, OnInit } from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 
 @Component({
     selector: "Home",
-    moduleId: module.id,
-    templateUrl: "./home.component.html"
+    templateUrl: "tabs/home/home.component.html",
+    styleUrls: ["tabs/home/home.component.css"]
 })
 export class HomeComponent implements OnInit {
     constructor() {

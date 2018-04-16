@@ -1,9 +1,8 @@
-import { Component, OnInit } from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 
 @Component({
     selector: "native-hardware-test",
-    moduleId: module.id,
-    templateUrl: "./native-hardware-test.component.html"
+    templateUrl: "tabs/native-hardware-test/native-hardware-test.component.html"
 })
 export class NativeHardwareTestComponent implements OnInit {
     constructor() {
@@ -13,8 +12,5 @@ export class NativeHardwareTestComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        /* ***********************************************************
-        * Use the "ngOnInit" handler to initialize data for the view.
-        *************************************************************/
     }
 }

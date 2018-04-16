@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 
 @Component({
     selector: "performance",
-    templateUrl: "./performance.component.html"
+    templateUrl: "tabs/performance/performance.component.html"
 })
 export class PerformanceComponent implements OnInit {
     constructor() {
