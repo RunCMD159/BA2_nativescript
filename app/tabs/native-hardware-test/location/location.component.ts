@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {clearWatch, enableLocationRequest, watchLocation} from "nativescript-geolocation";
-import {Accuracy} from "tns-core-modules/ui/enums";
+import { Component, OnInit } from '@angular/core';
+import { clearWatch, enableLocationRequest, Location, watchLocation } from "nativescript-geolocation";
+import { Accuracy } from "tns-core-modules/ui/enums";
 
 @Component({
     selector: 'location',
@@ -20,6 +20,7 @@ export class LocationComponent implements OnInit {
     public monitorSpeed: string = "0";
 
     constructor() {
+        enableLocationRequest(true);
     }
 
     ngOnInit() {
@@ -29,11 +30,9 @@ export class LocationComponent implements OnInit {
             updateTime: 3000,
             minimumUpdateTime: 100
         };
-        enableLocationRequest(true);
     }
 
     public monitor(args) {
-        // >> location-monitoring
         if (this.isMonitoring) {
             clearWatch(this.listener);
             this.isMonitoring = false;
@@ -55,6 +54,5 @@ export class LocationComponent implements OnInit {
             this.isMonitoring = true;
             this.buttonText = "Stop location monitoring";
         }
-        // << location-monitoring
     }
 }

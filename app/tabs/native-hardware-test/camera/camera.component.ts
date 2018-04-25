@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {ImageAsset} from "tns-core-modules/image-asset";
-import {isAvailable, requestPermissions, takePicture} from "nativescript-camera";
+import { Component, OnInit } from '@angular/core';
+import { ImageAsset } from "tns-core-modules/image-asset";
+import { isAvailable, requestPermissions, takePicture } from "nativescript-camera";
 
 @Component({
     selector: 'camera',
@@ -16,10 +16,10 @@ export class CameraComponent implements OnInit {
     public height: number = 300;
 
     constructor() {
+        requestPermissions();
     }
 
     ngOnInit() {
-        requestPermissions();
     }
 
     onTakePhoto() {

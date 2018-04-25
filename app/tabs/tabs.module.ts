@@ -7,7 +7,7 @@ import {PerformanceComponent} from "./performance/performance.component";
 import {NativeScriptCommonModule} from "nativescript-angular/common";
 import {NativeScriptFormsModule, NativeScriptRouterModule} from "nativescript-angular";
 import {CameraComponent} from "./native-hardware-test/camera/camera.component";
-import {LocationComponent} from "./native-hardware-test/location/location.component";
+import { LocationComponent } from './native-hardware-test/location/location.component';
 
 @NgModule({
     imports: [
