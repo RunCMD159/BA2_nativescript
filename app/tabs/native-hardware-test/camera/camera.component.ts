@@ -20,6 +20,7 @@ export class CameraComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.onCheckForCamera()
     }
 
     onTakePhoto() {

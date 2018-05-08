@@ -40,7 +40,6 @@ export class LocationComponent implements OnInit {
         } else {
             this.listener = watchLocation((loc: Location) => {
                 if (loc) {
-                    console.log(loc);
                     this.monitorLongitude = (loc.longitude).toFixed(4);
                     this.monitorLatitude = (loc.latitude).toFixed(4);
                     this.monitorAltitude = (loc.altitude).toFixed(2);
