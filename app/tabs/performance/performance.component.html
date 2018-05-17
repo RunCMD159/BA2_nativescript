@@ -4,8 +4,11 @@ Feel free to customize layouts and components to change how the tab view looks.
 -->
 <StackLayout class="page page-content">
     <Label [text]="'Running Time: '+runningTime+' ms'"></Label>
-    <Button (tap)="runPerformanceTest()" text="Run Performance Test"></Button>
-    <ListView>
-        <Label *ngFor="let data of performanceData" [text]="data"></Label>
+    <Button (tap)="resetFields()" text="Test zurücksetzen"></Button>
+    <Button (tap)="runPerformanceTest()" text="Test starten"></Button>
+    <ListView *ngIf="isPerformanceTestRunning" [items]="performanceData">
+        <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
+            <Label [text]="item"></Label>
+        </ng-template>
     </ListView>
 </StackLayout>
