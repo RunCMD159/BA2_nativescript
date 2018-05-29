@@ -10,6 +10,7 @@ import { CameraComponent } from "./native-hardware-test/camera/camera.component"
 import { LocationComponent } from './native-hardware-test/location/location.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PerformanceService } from './performance/performance.service';
+import { FileComponent } from './native-hardware-test/file/file.component';
 
 @NgModule({
     imports: [
@@ -25,7 +26,8 @@ import { PerformanceService } from './performance/performance.service';
         NativeHardwareTestComponent,
         PerformanceComponent,
         CameraComponent,
-        LocationComponent
+        LocationComponent,
+        FileComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA
