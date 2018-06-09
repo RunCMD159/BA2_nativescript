@@ -1,26 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { clearWatch, enableLocationRequest, Location, watchLocation } from "nativescript-geolocation";
 import { Accuracy } from "tns-core-modules/ui/enums";
 
 @Component({
-    selector: 'location',
-    templateUrl: 'tabs/native-hardware-test/location/location.component.html'
+    selector: "location",
+    templateUrl: "tabs/native-hardware-test/location/location.component.html"
 })
 
 export class LocationComponent implements OnInit {
 
-    public buttonText = "Start location monitoring";
-    public isMonitoring = false;
-    public options;
-    public listener;
-    public monitorLongitude: string = "0";
-    public monitorLatitude: string = "0";
-    public monitorAltitude: string = "0";
-    public monitorDirection: string = "0";
-    public monitorSpeed: string = "0";
+    buttonText = "Geodaten anzeigen";
+    isMonitoring = false;
+    options;
+    listener;
+    monitorLongitude: string = "0";
+    monitorLatitude: string = "0";
+    monitorAltitude: string = "0";
+    monitorDirection: string = "0";
+    monitorSpeed: string = "0";
 
     constructor() {
-        enableLocationRequest(true);
     }
 
     ngOnInit() {
@@ -32,7 +31,12 @@ export class LocationComponent implements OnInit {
         };
     }
 
-    public monitor(args) {
+    monitor(args) {
+        enableLocationRequest().then((success) => {
+            alert("Standortdaten anzeigen");
+        }).catch((error) => {
+            alert("Standortdaten können nicht angezeigt werden");
+        });
         if (this.isMonitoring) {
             clearWatch(this.listener);
             this.isMonitoring = false;
